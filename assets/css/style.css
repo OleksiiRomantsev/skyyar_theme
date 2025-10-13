@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/* Підключення інших scss файлів*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+/* Підключення шрифтів*/
+@font-face {
+  font-family: Cygre;
+  src: url(../src/fonts/Cygre-Regular.woff2);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+/* Підключення змінних*/
+/* Загальні налаштування, робочі класи*/
+.wrapper {
+  width: 100%;
+  font-family: "Cygre";
+  line-height: 1;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: url(../src/img/bg-img.webp);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1110px;
+}
+
+.header {
+  padding-bottom: 96px;
+}
+.header__logo {
+  width: 284px;
+  height: auto;
+  max-width: 100%;
+}
+
+.content {
+  width: 100%;
+  padding-bottom: 80px;
+}
+.content__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  margin-bottom: 32px;
+  color: #000;
+}
+.content__text {
+  color: rgb(68, 68, 68);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.form {
+  width: 100%;
+  padding: 0 95px;
+}
+.form_line-wrapper {
+  display: flex;
+}
+.form__input {
+  padding: 14px 20px 14px 20px;
+  border: 1px solid rgba(55, 125, 255, 0.16);
+  flex-grow: 6;
+}
+.form__btn {
+  background: rgb(55, 125, 255);
+  padding: 14px 32px;
+  color: white;
+  text-transform: uppercase;
+}
+.form__btn:hover {
+  border: 1px solid rgb(55, 125, 255);
+  background: white;
+  color: rgb(55, 125, 255);
+  transition: all 0.3s ease 0.1s;
+}
+
+.contact-us {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  row-gap: 16px;
+  flex-wrap: wrap;
+}
+.contact-us_item {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  border: 1px dashed rgba(55, 125, 255, 0.16);
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+.contact-us_item:hover {
+  border: 1px dashed rgb(55, 125, 255);
+  transition: all 0.3s ease 0.1s;
+}
+.contact-us_link {
+  margin: 0px auto;
+  color: rgb(68, 68, 68);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  display: flex;
+}
+.contact-us_link-img {
+  margin-right: 4px;
+}
+
+.copy-right {
+  padding-top: 30px;
+}
+/* Підключення адаптиву*/
+@media (max-width: 767.98px) {
+  .wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .container {
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 15px;
+  }
+  .header {
+    padding-bottom: 32px;
+  }
+  .header__logo {
+    width: 177px;
+  }
+  .content {
+    padding-bottom: 48px;
+  }
+  .content__title {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 8px;
+  }
+  .content__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+  }
+  .form {
+    padding: 0;
+  }
+  .form__btn {
+    padding: 13px 16px;
+  }
+  .copy-right {
+    padding-top: 24px;
+  }
+}/*# sourceMappingURL=style.css.map */

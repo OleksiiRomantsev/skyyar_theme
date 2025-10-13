@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ this.page.title }}</title>
+        {% partial 'site/header' %}
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                {% page %}
+                {% partial 'site/footer' %}
+            </div>
+        </div>
+    </body>
+</html>

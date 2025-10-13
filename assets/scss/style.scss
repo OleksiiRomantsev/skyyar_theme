@@ -1,0 +1,190 @@
+/* Підключення інших scss файлів*/
+@import"_reset";
+
+
+/* Підключення шрифтів*/
+
+@font-face {
+  font-family: Cygre;
+  src: url(/src/fonts/Cygre-Regular.woff2);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+
+/* Підключення змінних*/
+$colorText: rgba(68, 68, 68, 1);
+$colorBgBnt: rgba(55, 125, 255, 1);
+$colorBorder: rgba(55, 125, 255, 0.16);
+
+
+
+
+/* Загальні налаштування, робочі класи*/
+.wrapper {
+  width: 100%;
+  font-family: 'Cygre';
+  line-height: 1;
+	padding-top: 200px;
+	padding-bottom: 200px;
+	background-image: url(/src/img/bg-img.webp);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1110px;
+	
+}
+.header {
+	padding-bottom: 96px;
+
+		// .header__logo
+
+		&__logo {
+			width: 284px;
+			height: auto;
+			max-width: 100%;
+			
+		}
+}
+.content {
+	width: 100%;
+	padding-bottom: 80px;
+
+		// .content__title
+
+		&__title {
+			font-size: 30px;
+			font-weight: 700;
+			line-height: 40px;
+			text-align: center;
+			margin-bottom: 32px;
+			color: #000;
+		}
+
+		// .content__text
+
+		&__text {
+			color: $colorText;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 28px;
+			text-align: center;
+			margin-bottom: 16px;
+
+		}
+
+		// .content__text-p
+
+		&__text-p {
+		}
+}
+.form {
+	width: 100%;
+	padding: 0 95px;
+
+		// .form_line
+
+		&_line {
+		}
+
+		// .form_line-wrapper
+
+		&_line-wrapper {
+			display: flex;
+
+		}
+
+		// .form__input
+
+		&__input {
+
+			padding: 14px 20px 14px 20px;
+			border: 1px solid $colorBorder;
+			flex-grow: 6;
+
+		}
+		&__btn {
+			background: $colorBgBnt;
+			padding: 14px 32px;
+			color: white;
+			text-transform:uppercase;
+			
+			&:hover {
+				border: 1px solid $colorBgBnt;
+				background: white;
+				color: $colorBgBnt;
+				transition: all 0.3s ease 0.1s;
+			}
+
+		}
+}
+.contact-us {
+	padding-top: 100px;
+	display: flex;
+	justify-content: space-around;
+	column-gap: 32px;
+	row-gap: 16px;
+	flex-wrap: wrap;
+
+		// .contact-us_item
+
+		&_item {
+			display: flex;
+			flex-grow: 1;
+			align-items: center;
+			border: 1px dashed $colorBorder;
+			padding: 10px 20px;
+			justify-content: space-between;
+			&:hover {
+				border: 1px dashed $colorBgBnt;
+				transition: all 0.3s ease 0.1s;
+			}
+
+			
+		}
+
+		// .contact-us_link
+
+		&_link {
+			margin: 0px auto;
+			// text-align: center;
+			color: $colorText;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 25px;
+			display: flex;
+		}
+
+		// .contact-us_link-img
+
+		&_link-img {
+			margin-right: 4px;
+
+		}
+
+		// .contact-us_tel
+
+		
+}
+.copy-right {
+	padding-top: 30px;
+
+		// .copy-right_item
+
+		&_item {
+		}
+}
+
+
+
+/* Підключення адаптиву*/
+@import"_media";
