@@ -2,11 +2,14 @@
 @import"_reset";
 
 
+/* Підключення адаптиву*/
+@import"_media";
+
 /* Підключення шрифтів*/
 
 @font-face {
   font-family: Cygre;
-  src: url(/src/fonts/Cygre-Regular.woff2);
+  src: url(/themes/skyyar/assets/src/fonts/Cygre-Regular.woff2);
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -15,25 +18,47 @@
 
 /* Підключення змінних*/
 $colorText: rgba(68, 68, 68, 1);
+$colorH1: #000;
 $colorBgBnt: rgba(55, 125, 255, 1);
+$colorBgBntHover: #0049CF;
 $colorBorder: rgba(55, 125, 255, 0.16);
+$colorBorderActive: #377DFF;
+
 
 
 
 
 /* Загальні налаштування, робочі класи*/
+
+
+body {
+
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+p,
+a,
+button,
+input,
+textarea {
+    font-size: 16px;
+}
+
 .wrapper {
   width: 100%;
   font-family: 'Cygre';
-  line-height: 1;
-	padding-top: 200px;
-	padding-bottom: 200px;
-	background-image: url(/src/img/bg-img.webp);
+	padding-top: 180px;
+	//padding-bottom: 230px;
+	background-image: url(/themes/skyyar/assets/src/img/bg-img.webp);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    color: $colorText;
+    line-height: 1.4;
+    font-size: 16px;
 
-	
+
 }
 
 .container {
@@ -41,10 +66,10 @@ $colorBorder: rgba(55, 125, 255, 0.16);
 	flex-direction: column;
 	align-items: center;
 	max-width: 1110px;
-	
+
 }
 .header {
-	padding-bottom: 96px;
+	padding-bottom: 80px;
 
 		// .header__logo
 
@@ -52,12 +77,14 @@ $colorBorder: rgba(55, 125, 255, 0.16);
 			width: 284px;
 			height: auto;
 			max-width: 100%;
-			
+
 		}
 }
 .content {
+
+
 	width: 100%;
-	padding-bottom: 80px;
+    padding: 0 95px 80px 95px;
 
 		// .content__title
 
@@ -67,7 +94,7 @@ $colorBorder: rgba(55, 125, 255, 0.16);
 			line-height: 40px;
 			text-align: center;
 			margin-bottom: 32px;
-			color: #000;
+			color: $colorH1;
 		}
 
 		// .content__text
@@ -107,22 +134,39 @@ $colorBorder: rgba(55, 125, 255, 0.16);
 
 		&__input {
 
-			padding: 14px 20px 14px 20px;
-			border: 1px solid $colorBorder;
-			flex-grow: 6;
+            padding: 14px 20px;
+            border: 1px solid $colorBorder;
+            flex-grow: 6;
+            background-color: transparent;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            outline: none;
 
-		}
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: $colorBorderActive;
+                background-color: white !important; // тимчасово для перевірки
+            }
+
+            /* Autofill Chrome */
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover,
+            &:-webkit-autofill:focus {
+                box-shadow: 0 0 0 1000px white inset;
+                -webkit-text-fill-color: #000;
+            }
+        }
 		&__btn {
 			background: $colorBgBnt;
 			padding: 14px 32px;
 			color: white;
 			text-transform:uppercase;
-			
+
 			&:hover {
-				border: 1px solid $colorBgBnt;
-				background: white;
-				color: $colorBgBnt;
-				transition: all 0.3s ease 0.1s;
+				background: $colorBgBntHover;
+				transition: all 0.2s ease 0.1s;
 			}
 
 		}
@@ -149,7 +193,7 @@ $colorBorder: rgba(55, 125, 255, 0.16);
 				transition: all 0.3s ease 0.1s;
 			}
 
-			
+
 		}
 
 		// .contact-us_link
@@ -173,7 +217,7 @@ $colorBorder: rgba(55, 125, 255, 0.16);
 
 		// .contact-us_tel
 
-		
+
 }
 .copy-right {
 	padding-top: 30px;
@@ -181,6 +225,12 @@ $colorBorder: rgba(55, 125, 255, 0.16);
 		// .copy-right_item
 
 		&_item {
+            color: rgba(68, 68, 68, 0.60);
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: uppercase;
 		}
 }
 

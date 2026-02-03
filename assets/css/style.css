@@ -6,6 +6,8 @@
   padding: 0;
   margin: 0;
   border: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -32,7 +34,7 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
+  font-size: 16px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -42,6 +44,14 @@ input,
 button,
 textarea {
   font-family: inherit;
+}
+
+body,
+input,
+textarea,
+button {
+  -webkit-font-smoothing: antialiased; /* для Safari, iOS */
+  -moz-osx-font-smoothing: grayscale; /* для Firefox Mac */
 }
 
 input::-ms-clear {
@@ -87,26 +97,101 @@ h6 {
   overflow: hidden;
 }
 
+/* Підключення адаптиву*/
+@media (max-width: 767.98px) {
+  p,
+  a,
+  button,
+  input,
+  textarea {
+    font-size: 14px;
+  }
+  .wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .container {
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 15px;
+  }
+  .header {
+    padding-bottom: 32px;
+  }
+  .header__logo {
+    width: 177px;
+  }
+  .content {
+    padding: 0 0 48px 0;
+  }
+  .content__title {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 8px;
+  }
+  .content__text {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 8px;
+  }
+  .form {
+    padding: 0;
+  }
+  .form_line-wrapper {
+    flex-direction: column;
+  }
+  .form__input {
+    margin-bottom: 10px;
+  }
+  .form__btn {
+    padding: 13px 16px;
+  }
+  .contact-us {
+    padding-top: 60px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-us_item {
+    width: 100%;
+  }
+  .copy-right {
+    padding-top: 24px;
+  }
+}
 /* Підключення шрифтів*/
 @font-face {
   font-family: Cygre;
-  src: url(../src/fonts/Cygre-Regular.woff2);
+  src: url(/themes/skyyar/assets/src/fonts/Cygre-Regular.woff2);
   font-style: normal;
   font-weight: 400;
   font-display: swap;
 }
 /* Підключення змінних*/
 /* Загальні налаштування, робочі класи*/
+body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+p,
+a,
+button,
+input,
+textarea {
+  font-size: 16px;
+}
+
 .wrapper {
   width: 100%;
   font-family: "Cygre";
-  line-height: 1;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  background-image: url(../src/img/bg-img.webp);
+  padding-top: 180px;
+  background-image: url(/themes/skyyar/assets/src/img/bg-img.webp);
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: rgb(68, 68, 68);
+  line-height: 1.4;
+  font-size: 16px;
 }
 
 .container {
@@ -117,7 +202,7 @@ h6 {
 }
 
 .header {
-  padding-bottom: 96px;
+  padding-bottom: 80px;
 }
 .header__logo {
   width: 284px;
@@ -127,7 +212,7 @@ h6 {
 
 .content {
   width: 100%;
-  padding-bottom: 80px;
+  padding: 0 95px 80px 95px;
 }
 .content__title {
   font-size: 30px;
@@ -153,9 +238,25 @@ h6 {
   display: flex;
 }
 .form__input {
-  padding: 14px 20px 14px 20px;
+  padding: 14px 20px;
   border: 1px solid rgba(55, 125, 255, 0.16);
   flex-grow: 6;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+}
+.form__input:hover, .form__input:focus, .form__input:active {
+  border-color: #377DFF;
+  background-color: white !important;
+}
+.form__input {
+  /* Autofill Chrome */
+}
+.form__input:-webkit-autofill, .form__input:-webkit-autofill:hover, .form__input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 1000px white inset;
+  -webkit-text-fill-color: #000;
 }
 .form__btn {
   background: rgb(55, 125, 255);
@@ -164,18 +265,15 @@ h6 {
   text-transform: uppercase;
 }
 .form__btn:hover {
-  border: 1px solid rgb(55, 125, 255);
-  background: white;
-  color: rgb(55, 125, 255);
-  transition: all 0.3s ease 0.1s;
+  background: #0049CF;
+  transition: all 0.2s ease 0.1s;
 }
 
 .contact-us {
   padding-top: 100px;
   display: flex;
   justify-content: space-around;
-  -moz-column-gap: 32px;
-       column-gap: 32px;
+  column-gap: 32px;
   row-gap: 16px;
   flex-wrap: wrap;
 }
@@ -206,13 +304,28 @@ h6 {
 .copy-right {
   padding-top: 30px;
 }
+.copy-right_item {
+  color: rgba(68, 68, 68, 0.6);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
 /* Підключення адаптиву*/
 @media (max-width: 767.98px) {
-    .wrapper {
-        padding-top: 60px;
-        padding-bottom: 60px;
-        background-image: url(../src/img/bg-img-mob.webp);
-    }
+  p,
+  a,
+  button,
+  input,
+  textarea {
+    font-size: 14px;
+  }
+  .wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   .container {
     width: 100%;
     margin: 0px auto;
@@ -225,7 +338,7 @@ h6 {
     width: 177px;
   }
   .content {
-    padding-bottom: 48px;
+    padding: 0 0 48px 0;
   }
   .content__title {
     font-size: 24px;
@@ -233,17 +346,31 @@ h6 {
     margin-bottom: 8px;
   }
   .content__text {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 22px;
     margin-bottom: 8px;
   }
   .form {
     padding: 0;
   }
+  .form_line-wrapper {
+    flex-direction: column;
+  }
+  .form__input {
+    margin-bottom: 10px;
+  }
   .form__btn {
     padding: 13px 16px;
+  }
+  .contact-us {
+    padding-top: 60px;
+    flex-direction: column;
+    width: 100%;
+  }
+  .contact-us_item {
+    width: 100%;
   }
   .copy-right {
     padding-top: 24px;
   }
-}/*# sourceMappingURL=style.css.map */
+}

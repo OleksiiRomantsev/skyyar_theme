@@ -1,0 +1,4 @@
+npx sass --watch assets/scss:assets/css --no-source-map --style=expanded
+
+
+/themes/skyyar/assets/src/img/bg-img.webp
