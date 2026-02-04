@@ -7,27 +7,27 @@
 
 /* Підключення шрифтів*/
 
-//@font-face {
-//  font-family: Cygre;
-//  src: url(/themes/skyyar/assets/src/fonts/Cygre-Regular.woff2);
-//  font-style: normal;
-//  font-weight: 400;
-//  font-display: swap;
-//}
+@font-face {
+  font-family: 'Google Sans';
+  src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Regular.woff2);
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
 
 @font-face {
-    font-family: Cygre;
-    src: url(/themes/skyyar/assets/src/fonts2/Cygre-Regular.woff2);
+    font-family: 'Google Sans';
+    src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Medium.woff2);
     font-style: normal;
-    font-weight: 400;
-    font-display: optional;
+    font-weight: 500;
+    font-display: swap;
 }
 @font-face {
-    font-family: Cygre;
-    src: url(/themes/skyyar/assets/src/fonts2/Cygre-Bold.woff2);
+    font-family: 'Google Sans';
+    src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Bold.woff2);
     font-style: normal;
     font-weight: 700;
-    font-display: optional;
+    font-display: swap;
 }
 
 /* Підключення змінних*/
@@ -177,6 +177,7 @@ textarea {
 		&__btn {
 			background: $colorBgBnt;
 			padding: 14px 32px;
+            font-weight: 500;
 			color: white;
 			text-transform:uppercase;
 
@@ -254,3 +255,6 @@ textarea {
 
 /* Підключення адаптиву*/
 @import"_media";
+
+
+
