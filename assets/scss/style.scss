@@ -137,6 +137,7 @@ textarea {
 		// .form_line
 
 		&_line {
+            padding: 0 95px;
 		}
 
 		// .form_line-wrapper
@@ -150,7 +151,8 @@ textarea {
 
 		&__input {
 
-            padding: 14px 20px;
+            padding: 16px 20px;
+            line-height: 1.3;
             border: 1px solid $colorBorder;
             flex-grow: 6;
             background-color: transparent;
@@ -158,6 +160,7 @@ textarea {
             -webkit-appearance: none;
             -moz-appearance: none;
             outline: none;
+
 
             &:hover,
             &:focus,
@@ -176,10 +179,11 @@ textarea {
         }
 		&__btn {
 			background: $colorBgBnt;
-			padding: 14px 32px;
+			padding: 16px 32px;
             font-weight: 500;
 			color: white;
 			text-transform:uppercase;
+            line-height: 1.5;
 
 			&:hover {
 				background: $colorBgBntHover;
@@ -238,18 +242,33 @@ textarea {
 }
 .copy-right {
 	padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
 
 		// .copy-right_item
 
 		&_item {
             color: rgba(68, 68, 68, 0.60);
-            text-align: center;
             font-size: 14px;
-            font-style: normal;
             font-weight: 400;
             text-transform: uppercase;
 		}
-}
+    // .copy-right_sign
+        &_sign {
+            width: 12px;
+            height: 12px;
+            display: block;
+            background-size: cover;
+
+        }
+    }
+
+
+
+
 
 
 
