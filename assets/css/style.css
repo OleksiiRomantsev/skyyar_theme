@@ -161,19 +161,33 @@ h6 {
 /* Підключення шрифтів*/
 @font-face {
   font-family: Cygre;
-  src: url(/themes/skyyar/assets/src/fonts/Cygre-Regular.woff2);
+  src: url(/themes/skyyar/assets/src/fonts2/Cygre-Regular.woff2);
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
+  font-display: optional;
+}
+@font-face {
+  font-family: Cygre;
+  src: url(/themes/skyyar/assets/src/fonts2/Cygre-Bold.woff2);
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
 }
 /* Підключення змінних*/
 /* Загальні налаштування, робочі класи*/
 body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  font-family: "Cygre", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
-p,
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.3;
+}
+
 a,
 button,
 input,
@@ -183,14 +197,12 @@ textarea {
 
 .wrapper {
   width: 100%;
-  font-family: "Cygre";
   padding-top: 180px;
   background-image: url(/themes/skyyar/assets/src/img/bg-img.webp);
   display: flex;
   flex-direction: column;
   align-items: center;
   color: rgb(68, 68, 68);
-  line-height: 1.4;
   font-size: 16px;
 }
 
@@ -217,7 +229,6 @@ textarea {
 .content__title {
   font-size: 30px;
   font-weight: 700;
-  line-height: 40px;
   text-align: center;
   margin-bottom: 32px;
   color: #000;
@@ -225,8 +236,6 @@ textarea {
 .content__text {
   color: rgb(68, 68, 68);
   font-size: 20px;
-  font-weight: 400;
-  line-height: 28px;
   text-align: center;
   margin-bottom: 16px;
 }

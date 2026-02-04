@@ -7,14 +7,28 @@
 
 /* Підключення шрифтів*/
 
-@font-face {
-  font-family: Cygre;
-  src: url(/themes/skyyar/assets/src/fonts/Cygre-Regular.woff2);
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
+//@font-face {
+//  font-family: Cygre;
+//  src: url(/themes/skyyar/assets/src/fonts/Cygre-Regular.woff2);
+//  font-style: normal;
+//  font-weight: 400;
+//  font-display: swap;
+//}
 
+@font-face {
+    font-family: Cygre;
+    src: url(/themes/skyyar/assets/src/fonts2/Cygre-Regular.woff2);
+    font-style: normal;
+    font-weight: 400;
+    font-display: optional;
+}
+@font-face {
+    font-family: Cygre;
+    src: url(/themes/skyyar/assets/src/fonts2/Cygre-Bold.woff2);
+    font-style: normal;
+    font-weight: 700;
+    font-display: optional;
+}
 
 /* Підключення змінних*/
 $colorText: rgba(68, 68, 68, 1);
@@ -35,9 +49,16 @@ body {
 
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    font-family: 'Cygre', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
+    line-height: 1.4;
+}
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.3;
 }
 
-p,
+
 a,
 button,
 input,
@@ -47,7 +68,6 @@ textarea {
 
 .wrapper {
   width: 100%;
-  font-family: 'Cygre';
 	padding-top: 180px;
 	//padding-bottom: 230px;
 	background-image: url(/themes/skyyar/assets/src/img/bg-img.webp);
@@ -55,7 +75,6 @@ textarea {
 	flex-direction: column;
 	align-items: center;
     color: $colorText;
-    line-height: 1.4;
     font-size: 16px;
 
 
@@ -91,7 +110,6 @@ textarea {
 		&__title {
 			font-size: 30px;
 			font-weight: 700;
-			line-height: 40px;
 			text-align: center;
 			margin-bottom: 32px;
 			color: $colorH1;
@@ -102,8 +120,6 @@ textarea {
 		&__text {
 			color: $colorText;
 			font-size: 20px;
-			font-weight: 400;
-			line-height: 28px;
 			text-align: center;
 			margin-bottom: 16px;
 
