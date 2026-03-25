@@ -3,13 +3,13 @@
 
 
 /* Підключення адаптиву*/
-@import"_media";
+// @import"_media";
 
 /* Підключення шрифтів*/
 
 @font-face {
   font-family: 'Google Sans';
-  src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Regular.woff2);
+  src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Regular-subset.woff2);
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -17,14 +17,14 @@
 
 @font-face {
     font-family: 'Google Sans';
-    src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Medium.woff2);
+    src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Medium-subset.woff2);
     font-style: normal;
     font-weight: 500;
     font-display: swap;
 }
 @font-face {
     font-family: 'Google Sans';
-    src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Bold.woff2);
+    src: url(/themes/skyyar/assets/src/fonts/GoogleSans-Bold-subset.woff2);
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -125,10 +125,9 @@ textarea {
 
 		}
 
-		// .content__text-p
+		
 
-		&__text-p {
-		}
+		
 }
 .form {
 	width: 100%;
